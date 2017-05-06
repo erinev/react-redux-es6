@@ -1,8 +1,8 @@
 {
-  "name": "pluralsight-redux-starter",
+  "name": "erinev-react-redux-es6-starter",
   "version": "1.0.0",
-  "description": "Starter kit for React and Redux Pluralsight course by Cory House",
-  "author": "Cory House",
+  "description": "Starter kit for React and Redux in ES6",
+  "author": "Erikas Neverdauskas",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "6.8.0",
@@ -58,6 +58,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/pluralsight-redux-starter"
+    "url": "https://github.com/erinev/react-redux-es6"
   }
 }
