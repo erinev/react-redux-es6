@@ -8,9 +8,12 @@ import './styles/styles.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import storeConfiguration from './app/store/storeConfiguration';
 import courseActions from './app/course/courseActions';
+import authorActions from './app/author/authorActions';
 
 const store = storeConfiguration.configureStore();
 store.dispatch(courseActions.loadCourses());
+store.dispatch(authorActions.loadAuthors());
+
 
 render(
     <Provider store={ store }>
