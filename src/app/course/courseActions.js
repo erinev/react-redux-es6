@@ -1,5 +1,6 @@
 import courseActionTypes from './courseActionTypes';
 import courseApi from './courseApiMock';
+import ajaxRequestActions from '../common/api/ajaxRequestActions';
 
 const loadCoursesSuccess = (courses) => {
     return { type: courseActionTypes.LOAD_COURSES_SUCCESS, courses };
@@ -25,6 +26,7 @@ const saveCoursesFailure = (error) => {
 
 const loadCourses = () => {
     return (dispatch) => {
+        dispatch(ajaxRequestActions.beginAjaxRequest());
         return courseApi.getAllCourses()
             .then((courses) => {
                 dispatch(loadCoursesSuccess(courses));
@@ -37,6 +39,7 @@ const loadCourses = () => {
 
 const saveCourse = (course) => {
     return (dispatch) => {
+        dispatch(ajaxRequestActions.beginAjaxRequest());
         return courseApi.saveCourse(course)
             .then((savedCourse) => {
                 course.id ? dispatch(updateCourseSuccess(savedCourse)) : dispatch(createCourseSuccess(savedCourse));
@@ -47,4 +50,7 @@ const saveCourse = (course) => {
     };
 };
 
-export default { loadCourses, saveCourse };
+export default {
+    loadCourses,
+    saveCourse
+};
