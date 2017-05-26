@@ -1,3 +1,3 @@
-const apiMockDelayInMs = 1000;
+const apiMockDelayInMs = 2000;
 
 export default apiMockDelayInMs;

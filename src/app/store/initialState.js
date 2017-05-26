@@ -1,6 +1,7 @@
 const initialState = {
     authors: [],
-    courses: []
+    courses: [],
+    numberOfAjaxCallsInProgress: 0
 };
 
 export default initialState;
